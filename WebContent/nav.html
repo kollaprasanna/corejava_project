@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topnav" style="background:#006666;border:black; border-width:2px; border-style:solid;">
+  <div class="navigation-bar">
+
+
+
+            <div id="navigation-container">
+
+              <img src="cyr technologies.jpg"width="4%" height="3%">
+
+
+    <a href="index.html">Home</a> |&nbsp;
+    <a href="nav.html">Registration form</a> |&nbsp;
+    <a href="ViewServlet">View employee</a> |&nbsp;
+    <a href="nav.html">Add employee</a> |&nbsp;&nbsp;
+    <a href="login.html">sign out</a>
+ </nav>
+</div>
+</div>
+<h1>Add New Employee</h1>  
+<form action="SaveServlet" method="post">  
+<table align="center">  
+<tr><td>Name:</td><td><input type="text" name="name"/></td></tr>  
+<tr><td>Password:</td><td><input type="password" name="password"/></td></tr>  
+<tr><td>Email:</td><td><input type="email" name="email"/></td></tr>  
+<tr><td>Country:</td><td>  
+<select name="country" style="width:150px">  
+<option>India</option>  
+<option>USA</option>  
+<option>UK</option>  
+<option>Other</option>  
+</select>  
+</td></tr>  
+<tr><td colspan="2"><input type="submit" value="Save Employee"/></td></tr>  
+</table>  
+</form>  
+  
+<br/>  
+<a href="ViewServlet" >view employees</a>
+</body>
+</html>

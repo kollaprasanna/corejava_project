@@ -1,0 +1,76 @@
+<html>
+<head>
+  <style>
+  form{
+    text-align: center;
+  }
+  h1{
+    text-align: center;
+  }
+  #nav {
+  width:370px;
+  margin:0 auto;
+  list-style:none;
+  }
+  #nav li {
+  float:left;
+  font-size: 20px;
+  }
+  #nav a {
+  display:block;
+  text-align:center;
+  width:150px; /* fixed width */
+  text-decoration:none;
+  }
+  </style>
+
+
+<script type="text/javascript">
+function validate(){
+var name=document.f1.name.value;
+var passwordlength=document.f1.password.value.length;
+var status=false;
+if(name==""){
+document.getElementById("namelocation").innerHTML=
+" <img src='cancel.png' width='3%'height='3%''> Please enter your name";
+status=false;
+}else{
+document.getElementById("namelocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";
+status=true;
+}
+
+if(passwordlength<6){
+document.getElementById("passwordlocation").innerHTML=
+" <img src='cancel.png' width='3%'height='3%'> Password must be greater than 6";
+status=false;
+}else{
+document.getElementById("passwordlocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";
+}
+
+return status;
+}
+</script>
+</head>
+
+<body>
+
+  <form name="f1" action="nav.html" onsubmit="return validate()">
+    <h1>Login Form</h1>
+  <table align="center">
+  <tr><td>Name:</td><td><input type="text" name="name"/>
+  <span id="namelocation" style="color:red"></span></td></tr>
+  <tr><td>Password:</td><td><input type="password" name="password"/>
+  <span id="passwordlocation" style="color:red"></span></td></tr>
+<tr align="center">
+
+<tr>
+
+<tr align="center"><td colspan="2"><input type="submit" value="Login"/>  </td></tr>
+<tr align="center">
+
+</tr>
+
+</table>
+</form>
+</body>
+</html>
